@@ -68,10 +68,6 @@ FROM
     left join locations as loc on sr.location_id = loc.id
     left join location_emails as locem on loc.id = locem.location_id
     left join url_parameters par on sr.id = par.table_id and sr.form_id = par.form_id
-WHERE 
-    submitted_time > '2024-10-01'
-ORDER BY 
-    submitted_time desc
 
 
 
